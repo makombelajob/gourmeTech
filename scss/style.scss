@@ -1,2 +1,147 @@
-$base-color : black;
-
+$black : black;
+$green : green;
+$blue : blue;
+$main-color : chocolate;
+$center : center;
+$white : white;
+$none : none;
+img{
+  width: 100%;
+  vertical-align: middle;
+}
+body{
+    .voir{
+        background-color: $main-color;
+        color: $white;
+        border: $none;
+        border-radius: 0.3rem;
+        margin-top: 0.5rem;
+        cursor: pointer;
+        width: 100%;
+        padding-block: 1rem;
+    }
+    header{
+        h2{
+            text-align: $center;
+            font-size: 1.5rem;
+            background-color: $main-color;
+            padding: 1rem;
+            color: $white;
+        }
+        nav{
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem;
+            a{
+                text-decoration: $none;
+                color: $main-color;
+                span{
+                    background-color: $main-color;
+                    color: $white;
+                    border-radius: 50%;
+                    padding: 0.2rem;
+                    margin-right: 0.2rem;
+                }
+            }
+            #theme{
+                border: $none;
+            }
+            
+            .open{
+                display: $none;
+                li{
+                    a{
+                        color: $black;
+                    }
+                }
+            }
+            #burger{
+                cursor: pointer;
+            }
+        }
+        form{
+            padding-inline: 0.5rem;
+            button,input{
+                width: 100%;
+            }
+            input{
+                box-sizing: border-box;
+            }
+            button{
+                background-color: $main-color;
+                color: $white;
+                border: $none;
+                border-radius: 0.3rem;
+                margin-block: 0.5rem;
+                cursor: pointer;
+            }
+        }
+    }
+    #hero{
+        padding: 0.5rem;
+        .level{
+            padding-block: 0.5rem;
+        }
+    }
+    section:nth-of-type(2){
+        article{
+            background-color: rgba(128, 128, 128, 0.22);
+            border-radius: 0.6rem;
+            margin: 1rem;
+            position: relative;
+            
+            .fav-btn{
+                position: absolute;
+                right: 1rem;
+                top: 1rem;
+                border-radius: 50%;
+                border: $none;
+                cursor: pointer;
+            }
+            img{
+                border-radius: 1rem 1rem 0 0;
+            }
+            figcaption{
+                margin: 0.7rem 0.5rem;
+                h3{
+                    padding-block: 1rem;
+                    font-size: 1.2rem;
+                }
+                span{
+                    color: $white;
+                    padding: 0.3rem;
+                    border-radius: 1.5rem;
+                }
+                span:first-of-type{
+                    background-color: $main-color;
+                }
+                span:nth-of-type(2){
+                    background-color: $green;
+                }
+                span:last-of-type{
+                    background-color: $blue;
+                }
+            }
+            
+        }
+    }
+    section:last-of-type{
+        margin-inline: 1rem;
+        h2{
+            color: $main-color;
+            margin-block: 0.5rem;
+        }
+        article ul li{
+            padding-block: 0.2rem;
+            a{
+                text-decoration: $none;
+                color: $black;
+                
+            }
+        }
+    }
+    footer{
+        margin-block: 1rem;
+        text-align: center;
+    }
+}

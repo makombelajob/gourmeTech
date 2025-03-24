@@ -1,3 +1,131 @@
+img {
+  width: 100%;
+  vertical-align: middle;
+}
 
+body .voir {
+  background-color: chocolate;
+  color: white;
+  border: none;
+  border-radius: 0.3rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  width: 100%;
+  padding-block: 1rem;
+}
+body header h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  background-color: chocolate;
+  padding: 1rem;
+  color: white;
+}
+body header nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+body header nav a {
+  text-decoration: none;
+  color: chocolate;
+}
+body header nav a span {
+  background-color: chocolate;
+  color: white;
+  border-radius: 50%;
+  padding: 0.2rem;
+  margin-right: 0.2rem;
+}
+body header nav #theme {
+  border: none;
+}
+body header nav .open {
+  display: none;
+}
+body header nav .open li a {
+  color: black;
+}
+body header nav #burger {
+  cursor: pointer;
+}
+body header form {
+  padding-inline: 0.5rem;
+}
+body header form button, body header form input {
+  width: 100%;
+}
+body header form input {
+  box-sizing: border-box;
+}
+body header form button {
+  background-color: chocolate;
+  color: white;
+  border: none;
+  border-radius: 0.3rem;
+  margin-block: 0.5rem;
+  cursor: pointer;
+}
+body #hero {
+  padding: 0.5rem;
+}
+body #hero .level {
+  padding-block: 0.5rem;
+}
+body section:nth-of-type(2) article {
+  background-color: rgba(128, 128, 128, 0.22);
+  border-radius: 0.6rem;
+  margin: 1rem;
+  position: relative;
+}
+body section:nth-of-type(2) article .fav-btn {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+body section:nth-of-type(2) article img {
+  border-radius: 1rem 1rem 0 0;
+}
+body section:nth-of-type(2) article figcaption {
+  margin: 0.7rem 0.5rem;
+}
+body section:nth-of-type(2) article figcaption h3 {
+  padding-block: 1rem;
+  font-size: 1.2rem;
+}
+body section:nth-of-type(2) article figcaption span {
+  color: white;
+  padding: 0.3rem;
+  border-radius: 1.5rem;
+}
+body section:nth-of-type(2) article figcaption span:first-of-type {
+  background-color: chocolate;
+}
+body section:nth-of-type(2) article figcaption span:nth-of-type(2) {
+  background-color: green;
+}
+body section:nth-of-type(2) article figcaption span:last-of-type {
+  background-color: blue;
+}
+body section:last-of-type {
+  margin-inline: 1rem;
+}
+body section:last-of-type h2 {
+  color: chocolate;
+  margin-block: 0.5rem;
+}
+body section:last-of-type article ul li {
+  padding-block: 0.2rem;
+}
+body section:last-of-type article ul li a {
+  text-decoration: none;
+  color: black;
+}
+body footer {
+  margin-block: 1rem;
+  text-align: center;
+}
 
 /*# sourceMappingURL=style.css.map */

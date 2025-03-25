@@ -1,68 +1,99 @@
 <!doctype html>
 <html lang="fr">
 <head>
+    <!-- Définition de l'encodage de caractères -->
     <meta charset="UTF-8">
+
+    <!-- Définition de la vue pour les appareils mobiles -->
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <!-- Déclaration de la compatibilité avec Internet Explorer -->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Lien vers le fichier de réinitialisation CSS pour uniformiser le style entre navigateurs -->
     <link rel="stylesheet" href="css/reset.css">
+
+    <!-- Lien vers le fichier principal de style CSS -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Lien vers le fichier JavaScript en tant que module -->
     <script src="js/script.js" type="module"></script>
-    <title>Document</title>
+
+    <title>Document</title> <!-- Titre de la page -->
 </head>
 <body id="page-favoris">
-    <header>
-        <h2>Version Mobile</h2>
-        <nav>
-            <a href="#"><span>G</span>GourmeTech</a>
-            <button aria-label="Changer de thème" id="theme">
-                🌙
-            </button>
-            <div class="open">
-                <ul>
-                    <li><a href="#">Accueil</a></li>
-                    <li><a href="ajouter-recette.html">Ajouter une recette</a></li>
-                    <li><a href="favoris.html">Mes favoris</a></li>
-                    <li><a href="a-propos.html">A propos</a></li>
-                </ul>
-                <button id="close">X</button>
-            </div>
-            <svg id="burger" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
-                />
-            </svg>
-        </nav>
-        <form action="">
-            <input type="text" placeholder="Recherche une recette">
-            <button type="submit">Recherche</button>
-        </form>
-    </header>
-    <main>
-        <div class="favoris">
+<!-- Section d'en-tête contenant le logo et le menu -->
+<header>
+    <h2>Version Mobile</h2>
+    <nav>
+        <!-- Lien vers la page d'accueil avec le logo -->
+        <a href="#"><span>G</span>GourmeTech</a>
 
+        <!-- Bouton pour changer de thème (mode sombre/clair) -->
+        <button aria-label="Changer de thème" id="theme">
+            🌙
+        </button>
+
+        <!-- Menu déroulant avec les différentes pages de navigation -->
+        <div class="open">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="ajouter-recette.html">Ajouter une recette</a></li>
+                <li><a href="favoris.html">Mes favoris</a></li>
+                <li><a href="a-propos.html">A propos</a></li>
+            </ul>
+            <!-- Bouton pour fermer le menu -->
+            <button id="close">X</button>
         </div>
-    </main>
 
-    <template id="template">
-        <article  data-id="1" data-category="dessert" data-time="60" data-difficulty="facile">
-            <button class="fav-btn" aria-label="Ajouter aux favoris"></button>
-            <figure>
-                <img src="assets/images/1.jpg" alt="Image d'un plat">
-                <figcaption>
-                    <h3></h3>
-                    <div>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </figcaption>
-            </figure>
-            <a href="" class="voir"></a>
-        </article>
-    </template>
+        <!-- Icône hamburger pour ouvrir le menu sur mobile -->
+        <svg id="burger" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+        </svg>
+    </nav>
 
-    <footer>
-        <p>&copy; GourmeTech - Tous droits réservés</p>
-    </footer>
+    <!-- Formulaire de recherche pour trouver une recette -->
+    <form action="">
+        <input type="text" placeholder="Recherche une recette">
+        <button type="submit">Recherche</button>
+    </form>
+</header>
+
+<main>
+    <!-- Section affichant les favoris, pour l'instant vide -->
+    <div class="favoris">
+        <!-- Ici, les favoris seront affichés dynamiquement avec JavaScript -->
+    </div>
+</main>
+
+<!-- Template utilisé pour générer les favoris dynamiquement -->
+<template id="template">
+    <!-- Article contenant les informations d'une recette, structure de base -->
+    <article  data-id="1" data-category="dessert" data-time="60" data-difficulty="facile">
+        <!-- Bouton pour ajouter aux favoris -->
+        <button class="fav-btn" aria-label="Ajouter aux favoris"></button>
+        <figure>
+            <!-- Image de la recette -->
+            <img src="assets/images/1.jpg" alt="Image d'un plat">
+            <figcaption>
+                <h3></h3>
+                <div>
+                    <!-- Détails sur la recette (ces informations seront ajoutées dynamiquement) -->
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </figcaption>
+        </figure>
+        <!-- Lien vers la page de la recette complète -->
+        <a href="" class="voir"></a>
+    </article>
+</template>
+
+<!-- Section du pied de page avec les informations de copyright -->
+<footer>
+    <p>&copy; GourmeTech - Tous droits réservés</p>
+</footer>
 </body>
 </html>

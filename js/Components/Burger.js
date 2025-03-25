@@ -1,19 +1,17 @@
-export function Burger(){
-	const openBtn = document.querySelector(".open");
-	
+export function Burger() {
 	const burger = document.querySelector("#burger");
-	burger.addEventListener("click", function () {
+	
+	const openBtn = document.querySelector(".open");
+	const closeBtn = document.querySelector("#close");
+	
+
+	burger.addEventListener("click", function (e) {
+		e.stopPropagation();
 		openBtn.style.display = "block";
 	});
 	
-	const closeBtn = document.querySelector("#close");
-	closeBtn.addEventListener("click", function(){
+	closeBtn.addEventListener("click", function (e) {
+		e.stopPropagation();
 		openBtn.style.display = "none";
-	});
-	
-	document.addEventListener("click", function(e) {
-		if(!burger.contains(e.target) && !openBtn.contains(e.target)){
-			openBtn.style.display = "none";
-		}
 	});
 }

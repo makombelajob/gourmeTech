@@ -4,33 +4,36 @@ img {
 }
 
 body .voir {
-  background-color: chocolate;
+  text-decoration: none;
+  background-color: #e67f22;
   color: white;
+  display: block;
+  text-align: center;
   border: none;
   border-radius: 0.3rem;
   margin-top: 0.5rem;
   cursor: pointer;
-  width: 100%;
   padding-block: 1rem;
 }
 body header h2 {
   text-align: center;
   font-size: 1.5rem;
-  background-color: chocolate;
+  background-color: #e67f22;
   padding: 1rem;
   color: white;
 }
 body header nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 0.5rem;
 }
 body header nav a {
   text-decoration: none;
-  color: chocolate;
+  color: #e67f22;
 }
 body header nav a span {
-  background-color: chocolate;
+  background-color: #e67f22;
   color: white;
   border-radius: 50%;
   padding: 0.2rem;
@@ -38,12 +41,35 @@ body header nav a span {
 }
 body header nav #theme {
   border: none;
+  cursor: pointer;
 }
 body header nav .open {
   display: none;
+  position: absolute;
+  background-color: rgba(230, 145, 34, 0.83);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 20%;
+  z-index: 100;
+}
+body header nav .open li {
+  padding: 1.5rem;
+  margin-left: 1rem;
 }
 body header nav .open li a {
   color: black;
+}
+body header nav .open #close {
+  position: inherit;
+  top: 0.7rem;
+  left: 0.7rem;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  background-color: black;
+  cursor: pointer;
+  padding: 0.3rem;
 }
 body header nav #burger {
   cursor: pointer;
@@ -58,7 +84,7 @@ body header form input {
   box-sizing: border-box;
 }
 body header form button {
-  background-color: chocolate;
+  background-color: #e67f22;
   color: white;
   border: none;
   border-radius: 0.3rem;
@@ -71,13 +97,23 @@ body #hero {
 body #hero .level {
   padding-block: 0.5rem;
 }
-body section:nth-of-type(2) article {
+body #hero .level h2 {
+  padding-block: 0.5rem;
+}
+body #hero .level label {
+  color: #959997;
+}
+body section:nth-of-type(2) article,
+body #recette article,
+body .favoris article {
   background-color: rgba(128, 128, 128, 0.22);
   border-radius: 0.6rem;
   margin: 1rem;
   position: relative;
 }
-body section:nth-of-type(2) article .fav-btn {
+body section:nth-of-type(2) article .fav-btn,
+body #recette article .fav-btn,
+body .favoris article .fav-btn {
   position: absolute;
   right: 1rem;
   top: 1rem;
@@ -85,35 +121,53 @@ body section:nth-of-type(2) article .fav-btn {
   border: none;
   cursor: pointer;
 }
-body section:nth-of-type(2) article img {
+body section:nth-of-type(2) article img,
+body #recette article img,
+body .favoris article img {
   border-radius: 1rem 1rem 0 0;
 }
-body section:nth-of-type(2) article figcaption {
+body section:nth-of-type(2) article figcaption,
+body #recette article figcaption,
+body .favoris article figcaption {
   margin: 0.7rem 0.5rem;
 }
-body section:nth-of-type(2) article figcaption h3 {
+body section:nth-of-type(2) article figcaption h3,
+body #recette article figcaption h3,
+body .favoris article figcaption h3 {
   padding-block: 1rem;
   font-size: 1.2rem;
 }
-body section:nth-of-type(2) article figcaption span {
+body section:nth-of-type(2) article figcaption span,
+body #recette article figcaption span,
+body .favoris article figcaption span {
   color: white;
   padding: 0.3rem;
   border-radius: 1.5rem;
 }
-body section:nth-of-type(2) article figcaption span:first-of-type {
-  background-color: chocolate;
+body section:nth-of-type(2) article figcaption span:first-of-type,
+body #recette article figcaption span:first-of-type,
+body .favoris article figcaption span:first-of-type {
+  background-color: #e67f22;
 }
-body section:nth-of-type(2) article figcaption span:nth-of-type(2) {
-  background-color: green;
+body section:nth-of-type(2) article figcaption span:nth-of-type(2),
+body #recette article figcaption span:nth-of-type(2),
+body .favoris article figcaption span:nth-of-type(2) {
+  background-color: #49c880;
 }
-body section:nth-of-type(2) article figcaption span:last-of-type {
-  background-color: blue;
+body section:nth-of-type(2) article figcaption span:last-of-type,
+body #recette article figcaption span:last-of-type,
+body .favoris article figcaption span:last-of-type {
+  background-color: #3898d4;
 }
 body section:last-of-type {
   margin-inline: 1rem;
 }
+body section:last-of-type a,
+body section:last-of-type p {
+  color: #959997;
+}
 body section:last-of-type h2 {
-  color: chocolate;
+  color: #e67f22;
   margin-block: 0.5rem;
 }
 body section:last-of-type article ul li {
@@ -121,11 +175,102 @@ body section:last-of-type article ul li {
 }
 body section:last-of-type article ul li a {
   text-decoration: none;
-  color: black;
 }
 body footer {
   margin-block: 1rem;
   text-align: center;
+}
+body #body-recette,
+body #page-favoris {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+body #body-recette main,
+body #page-favoris main {
+  flex: 1;
+}
+body #contactform {
+  margin-block: 1rem;
+}
+body #contactform h2 {
+  text-align: center;
+}
+body #contactform form {
+  background-color: rgba(128, 128, 128, 0.36);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+body #contactform form input:not([type=checkbox]),
+body #contactform form textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+body #contactform form input:not([type=checkbox]) {
+  height: 30px;
+}
+body #contactform form .invalid-feedback {
+  color: red;
+}
+body #contactform form .name,
+body #contactform form .email,
+body #contactform form .msg,
+body #contactform form .rgpd {
+  position: relative;
+}
+body #contactform form .name .is-valid,
+body #contactform form .name .is-invalid,
+body #contactform form .email .is-valid,
+body #contactform form .email .is-invalid,
+body #contactform form .msg .is-valid,
+body #contactform form .msg .is-invalid,
+body #contactform form .rgpd .is-valid,
+body #contactform form .rgpd .is-invalid {
+  position: absolute;
+  top: 25%;
+  right: 0;
+}
+body #contactform form .name .is-valid.is-valid,
+body #contactform form .name .is-invalid.is-valid,
+body #contactform form .email .is-valid.is-valid,
+body #contactform form .email .is-invalid.is-valid,
+body #contactform form .msg .is-valid.is-valid,
+body #contactform form .msg .is-invalid.is-valid,
+body #contactform form .rgpd .is-valid.is-valid,
+body #contactform form .rgpd .is-invalid.is-valid {
+  display: none;
+}
+body #contactform form .name.msg .is-valid,
+body #contactform form .name.msg .is-invalid,
+body #contactform form .email.msg .is-valid,
+body #contactform form .email.msg .is-invalid,
+body #contactform form .msg.msg .is-valid,
+body #contactform form .msg.msg .is-invalid,
+body #contactform form .rgpd.msg .is-valid,
+body #contactform form .rgpd.msg .is-invalid {
+  top: 1.5rem;
+}
+body #contactform form .name.rgpd .is-valid,
+body #contactform form .name.rgpd .is-invalid,
+body #contactform form .email.rgpd .is-valid,
+body #contactform form .email.rgpd .is-invalid,
+body #contactform form .msg.rgpd .is-valid,
+body #contactform form .msg.rgpd .is-invalid,
+body #contactform form .rgpd.rgpd .is-valid,
+body #contactform form .rgpd.rgpd .is-invalid {
+  top: 0;
+}
+body #contactform form .submit {
+  text-align: center;
+}
+body #contactform form .submit button {
+  padding: 0.7rem;
+  border: none;
+  border-radius: 1rem;
+  color: white;
+  background-color: #e67f22;
+  margin-block: 1rem;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */

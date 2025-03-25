@@ -7,26 +7,29 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" type="module"></script>
     <title>Document</title>
 </head>
-<body>
+<body id="body-recette">
     <header>
         <h2>Version Mobile</h2>
         <nav>
             <a href="#"><span>G</span>GourmeTech</a>
-            <button id="theme">
+            <button aria-label="Changer de thème" id="theme">
                 🌙
             </button>
             <div class="open">
                 <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="recette.html">Ajouter une recette</a></li>
-                    <li><a href="#">Mes favoris</a></li>
-                    <li><a href="#">A propos</a></li>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="ajouter-recette.html">Ajouter une recette</a></li>
+                    <li><a href="favoris.html">Mes favoris</a></li>
+                    <li><a href="a-propos.html">A propos</a></li>
                 </ul>
+                <button id="close">X</button>
             </div>
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+            <svg id="burger" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+                />
             </svg>
         </nav>
         <form action="">
@@ -35,24 +38,27 @@
         </form>
     </header>
     <main>
-        <section>
+        <section id="recette">
             <h2>Une recette en particulier</h2>
-            <figure>
-                <img src="assets/images/2.jpg" alt="Image d'un répas">
-                <figcaption>
-                    <h3>Tarte au pomme</h3>
-                    <div>
-                        <span>Dessert</span>
-                        <span>60 min</span>
-                        <span>Facile</span>
-                    </div>
-                </figcaption>
-            </figure>
-            <button>Voir la recette</button>
+            <article  data-id="2" data-category="plat" data-time="45" data-difficulty="moyen">
+                <button class="fav-btn" aria-label="Ajouter aux favoris">❤️</button>
+                <figure>
+                    <img src="assets/images/2.jpg" type="image/png" alt="Image d'un plat">
+                    <figcaption>
+                        <h3>Ratatouille provençale</h3>
+                        <div>
+                            <span>Plat</span>
+                            <span>45 min</span>
+                            <span>Moyen</span>
+                        </div>
+                    </figcaption>
+                </figure>
+                <a href="recette.html" class="voir">Voir la recette</a>
+            </article>
         </section>
     </main>
     <footer>
-        
+        <p>&copy; GourmeTech - Tous droits réservés</p>
     </footer>
 </body>
 </html>

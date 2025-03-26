@@ -3,6 +3,7 @@ import { Burger } from './Components/Burger.js';
 // Fonctionnement du burger
 Burger();
 
+
 // Chargement des états sauvegardés depuis le localStorage (si disponibles)
 let stockFavoris = JSON.parse(localStorage.getItem("id")) || [];
 
@@ -12,6 +13,10 @@ const favIcons = document.querySelectorAll(".fav-btn");
 
 // Boucler sur chaque bouton en particulier
 for (const favIcon of favIcons) {
+	// selection de type
+	const type = favIcon.closest(".article").querySelector(".type");
+	const timer = favIcon.closest(".article").querySelector(".time");
+	const level = favIcon.closest(".article").querySelector(".level");
 	
 	// Récupération de l'ID unique du dataset
 	const favIconId = favIcon.dataset.favorisId;
@@ -36,8 +41,13 @@ for (const favIcon of favIcons) {
 			stockFavoris = stockFavoris.filter(fav => fav.id !== favIconId);
 		}else{
 			favIcon.style.color = "red";
-			stockFavoris.push({ id: favIconId , name: favIconName});
-			console.table(stockFavoris);
+			stockFavoris.push({
+				id: favIconId ,
+				name: favIconName,
+				type: type.textContent,
+				time: timer.textContent,
+				level: level.textContent
+			});
 		}
 		
 		// stockage dans le localStorage
@@ -45,4 +55,4 @@ for (const favIcon of favIcons) {
 		localStorage.setItem("id", stockJson);
 	});
 }
-console.table(stockFavoris);
+

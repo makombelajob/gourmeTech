@@ -131,15 +131,15 @@ body #hero .level h2 {
 body #hero .level label {
   color: #959997;
 }
-body section:last-of-type article,
-body #recette article,
-body #favorisDisplay article {
+body section:last-of-type .article,
+body #recette .article,
+body #favorisDisplay .article {
   margin: 1rem;
   position: relative;
 }
-body section:last-of-type article .fav-btn,
-body #recette article .fav-btn,
-body #favorisDisplay article .fav-btn {
+body section:last-of-type .article .fav-btn,
+body #recette .article .fav-btn,
+body #favorisDisplay .article .fav-btn {
   position: absolute;
   right: 1rem;
   top: 1rem;
@@ -147,42 +147,42 @@ body #favorisDisplay article .fav-btn {
   border: none;
   cursor: pointer;
 }
-body section:last-of-type article img,
-body #recette article img,
-body #favorisDisplay article img {
+body section:last-of-type .article img,
+body #recette .article img,
+body #favorisDisplay .article img {
   border-radius: 1rem 1rem 0 0;
 }
-body section:last-of-type article figcaption,
-body #recette article figcaption,
-body #favorisDisplay article figcaption {
+body section:last-of-type .article figcaption,
+body #recette .article figcaption,
+body #favorisDisplay .article figcaption {
   margin: 0.7rem 0.5rem;
 }
-body section:last-of-type article figcaption .title,
-body #recette article figcaption .title,
-body #favorisDisplay article figcaption .title {
+body section:last-of-type .article figcaption .title,
+body #recette .article figcaption .title,
+body #favorisDisplay .article figcaption .title {
   padding-block: 1rem;
   font-size: 1.2rem;
 }
-body section:last-of-type article figcaption span,
-body #recette article figcaption span,
-body #favorisDisplay article figcaption span {
+body section:last-of-type .article figcaption span,
+body #recette .article figcaption span,
+body #favorisDisplay .article figcaption span {
   color: white;
   padding: 0.3rem;
   border-radius: 1.5rem;
 }
-body section:last-of-type article figcaption .type,
-body #recette article figcaption .type,
-body #favorisDisplay article figcaption .type {
+body section:last-of-type .article figcaption .type,
+body #recette .article figcaption .type,
+body #favorisDisplay .article figcaption .type {
   background-color: #e67f22;
 }
-body section:last-of-type article figcaption .time,
-body #recette article figcaption .time,
-body #favorisDisplay article figcaption .time {
+body section:last-of-type .article figcaption .time,
+body #recette .article figcaption .time,
+body #favorisDisplay .article figcaption .time {
   background-color: #49c880;
 }
-body section:last-of-type article figcaption .level,
-body #recette article figcaption .level,
-body #favorisDisplay article figcaption .level {
+body section:last-of-type .article figcaption .level,
+body #recette .article figcaption .level,
+body #favorisDisplay .article figcaption .level {
   background-color: #3898d4;
 }
 body #body-recette,

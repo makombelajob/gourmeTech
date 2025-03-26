@@ -1,41 +1,42 @@
-import {Burger} from  './Components/Burger.js';
+import { Burger } from './Components/Burger.js';
+
+// Fonctionnement du burger
+Burger();
 
 // Chargement des états sauvegardés depuis le localStorage (si disponibles)
 let stockFavoris = JSON.parse(localStorage.getItem('favFood')) || {};
 
-Burger();
-
+// Récupération des icônes de favoris
 const favIcons = document.querySelectorAll(".fav-btn");
 
-for(const favIcon of favIcons) {
+// Boucler sur chaque bouton en particulier
+for (const favIcon of favIcons) {
 	
 	// Récupération de l'ID unique du dataset
 	const favIconId = favIcon.dataset.favorisId;
 	
-	// Vérification de l'état du bouton est rouge dans l'objet JSON
-	if(stockFavoris[favIconId] === true) {
+	// Vérification de l'état du bouton : rouge si favori
+	if (stockFavoris[favIconId]) {
 		favIcon.style.color = "red";
+	} else {
+		favIcon.style.color = "initial"; // État par défaut
 	}
 	
-	// Ajout un écouteur d'événement pour chaque bouton
-	favIcon.addEventListener("click", function() {
-		// Vérification de l'état actuel du button, rouge ou pas
-		if(favIcon.style.color === "red") {
-			// Garder la couleur rouge
-			favIcon.style.color = "initial";
-			// Supprimer l'état du button dans stock
-			delete stockFavoris[favIconId];
-		}else{
-			// passer l'état du button en rouge
-			favIcon.style.color = "red";
-			// stocker l'id du button et son état
-			stockFavoris[favIconId] = true;
-		}
-		// Persistance avec LocalStorage
-		const favUser = JSON.stringify(stockFavoris);
-		localStorage.setItem('favFood', favUser);
+	// Ajout d'un écouteur d'événement pour chaque bouton
+	favIcon.addEventListener("click", function () {
 		
+		// Vérification de l'état actuel du bouton, rouge ou pas
+		if (favIcon.style.color === "red") {
+			// Si rouge, supprimer l'état du favori
+			favIcon.style.color = "initial";
+			delete stockFavoris[favIconId]; // Retirer l'ID du favori
+		} else {
+			// Passer l'état du bouton en rouge (ajouter le favori)
+			favIcon.style.color = "red";
+			stockFavoris[favIconId] = true; // Ajouter l'ID au stock des favoris
+		}
+		
+		// Persistance avec LocalStorage
+		localStorage.setItem('favFood', JSON.stringify(stockFavoris));
 	});
 }
-
-

@@ -1,8 +1,8 @@
 import { Burger } from './Components/Burger.js';
-
+import {filtreRecherche} from "./Components/filtreRecherche.js";
 // Fonctionnement du burger
 Burger();
-
+filtreRecherche();
 
 // Chargement des états sauvegardés depuis le localStorage (si disponibles)
 let stockFavoris = JSON.parse(localStorage.getItem("id")) || [];

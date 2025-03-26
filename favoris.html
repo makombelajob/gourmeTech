@@ -20,6 +20,7 @@
 
     <!-- Lien vers le fichier JavaScript en tant que module -->
     <script src="js/script.js" type="module"></script>
+    <script src="js/Components/favoris.js" defer></script>
 
     <title>Document</title> <!-- Titre de la page -->
 </head>
@@ -74,24 +75,24 @@
     <!-- Template utilisé pour générer les favoris dynamiquement -->
     <template id="template">
         <!-- Article contenant les informations d'une recette, structure de base -->
-        <article data-id="1" data-category="dessert" data-time="60" data-difficulty="facile">
+        <article data-id="" data-category="" data-time="" data-difficulty="">
             <!-- Bouton pour ajouter aux favoris -->
-            <button class="fav-btn" aria-label="Ajouter aux favoris"></button>
+            <button data-favoris-id="" class="" aria-label=""></button>
             <figure>
                 <!-- Image de la recette -->
-                <img src="assets/images/1.jpg" alt="Image d'un plat">
+                <img src="" alt="">
                 <figcaption>
-                    <h3></h3>
+                    <h3 class="title"></h3>
                     <div>
                         <!-- Détails sur la recette (ces informations seront ajoutées dynamiquement) -->
-                        <span></span>
-                        <span></span>
-                        <span></span>
+                        <span class="type"></span>
+                        <span class="time"></span>
+                        <span class="level"></span>
                     </div>
                 </figcaption>
             </figure>
             <!-- Lien vers la page de la recette complète -->
-            <a href="" class="voir"></a>
+            <a href="" class=""></a>
         </article>
     </template>
 

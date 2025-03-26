@@ -322,10 +322,26 @@ body footer div div ul a {
   body #hero .level h2 {
     grid-column: 1/-1;
   }
-  body #hero + section {
+  body #hero + section,
+  body #favorisDisplay {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 0;
+  }
+  body #contactform form {
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+  }
+  body #contactform form .inputLabel {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    justify-content: flex-start;
+    margin-block: 1rem;
+  }
+  body #contactform form .inputLabel input {
+    margin: 0 0.3rem 0 0;
+    padding: 0;
   }
   body footer div.nav {
     display: grid;
@@ -377,9 +393,13 @@ body footer div div ul a {
   body header form button {
     max-width: 100px;
   }
-  body main #hero + section {
+  body main #hero + section,
+  body main #favorisDisplay {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+  }
+  body main #contactform {
+    max-width: 100%;
   }
 }
 

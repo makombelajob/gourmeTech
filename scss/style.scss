@@ -268,9 +268,27 @@ body{
                 }
             }
         }
-        #hero + section{
+        #hero + section,
+        #favorisDisplay{
             @include grid2fr;
             margin: 0;
+        }
+        #contactform{
+            form{
+                padding: 1.5rem;
+                border-radius: 1.5rem;
+                .inputLabel{
+                    display: flex;
+                    align-items: center;
+                    gap: 0;
+                    justify-content: flex-start;
+                    margin-block: 1rem;
+                    input{
+                        margin: 0  0.3rem 0 0;
+                        padding: 0;
+                    }
+                }
+            }
         }
         footer{
             div.nav{
@@ -331,8 +349,12 @@ body{
             }
         }
         main{
-            #hero + section{
+            #hero + section,
+            #favorisDisplay{
                 @include grid3fr;
+            }
+            #contactform{
+                max-width: 100%;
             }
         }
     }

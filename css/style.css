@@ -34,6 +34,13 @@ body header h2 {
   padding: 1rem;
   color: white;
 }
+body header h2 .tablet,
+body header h2 .desktop {
+  display: none;
+}
+body header h2 .mobile {
+  display: initial;
+}
 body header nav {
   display: flex;
   justify-content: space-between;
@@ -295,6 +302,13 @@ body footer div div ul a {
   body {
     height: 100vh;
   }
+  body header h2 .mobile,
+  body header h2 .desktop {
+    display: none;
+  }
+  body header h2 .tablet {
+    display: initial;
+  }
   body nav,
   body main,
   body header form input,
@@ -361,6 +375,13 @@ body footer div div ul a {
   }
 }
 @media (min-width: 1028px) {
+  body header h2 .mobile,
+  body header h2 .tablet {
+    display: none;
+  }
+  body header h2 .desktop {
+    display: initial;
+  }
   body header nav .open {
     position: unset;
     background-color: unset;

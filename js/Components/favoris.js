@@ -1,9 +1,10 @@
-
+// Récupération de donnée dans localstorage si existe
 let stockFavoris = JSON.parse(localStorage.getItem("id")) || [];
-console.table(stockFavoris);
+
+// Récuperation de la balise qui permettra l'affichage de favoris
 const displayFavori = document.querySelector("#favorisDisplay");
 
-
+//Boucle sur les elements stocker
 for(const stockFavori of stockFavoris) {
 	
 	const template = document.querySelector("#template");

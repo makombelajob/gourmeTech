@@ -44,6 +44,13 @@ body{
             background-color: $main-color;
             padding: 1rem;
             color: $white;
+            .tablet,
+            .desktop{
+                display: $none;
+            }
+            .mobile{
+                display: initial;
+            }
         }
         nav{
             display: flex;
@@ -244,6 +251,17 @@ body{
 @media(min-width: 768px) {
     body{
         height: 100vh;
+        header{
+            h2{
+                .mobile,
+                .desktop {
+                    display: none;
+                }
+                .tablet{
+                    display: initial;
+                }
+            }
+        }
         nav,
         main,
         header form input,
@@ -312,6 +330,15 @@ body{
 @media(min-width: 1028px) {
     body{
         header{
+            h2{
+                .mobile,
+                .tablet{
+                    display: none;
+                }
+                .desktop{
+                    display: initial;
+                }
+            }
             nav{
                 .open{
                     position: unset;

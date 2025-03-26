@@ -1,0 +1,79 @@
+@mixin input-style {
+    box-sizing: border-box;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    width: 100%;
+    border-radius: 0.7rem;
+    border: 1px solid $main-color;
+    padding: 0.5rem 1rem;
+    &:focus{
+        border-color: #80bdff;
+        outline: none;
+        box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+    }
+}
+
+@mixin button-style {
+    background-color: $main-color;
+    color: $white;
+    border: $none;
+    border-radius: 0.3rem;
+    margin-block: 0.5rem;
+    cursor: $pointer;
+    padding-block: 0.5rem;
+}
+@mixin grid3fr {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+@mixin grid2fr {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+@mixin sendBtn{
+    border: none;
+    padding: 0.5rem 0.5rem;
+    border-radius: 0.5rem;
+    margin-block: 1rem;
+    color: $white;
+    background-color: $main-color;
+    cursor: pointer;
+}
+
+@mixin validation {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+}
+@mixin h2{
+    text-align: $center;
+    margin-block: 1rem;
+    font-size: 1.3rem;
+    color: $main-color;
+}
+@mixin close{
+    position: inherit;
+    top: 0.7rem;
+    left: 0.7rem;
+    border: $none;
+    border-radius: 50%;
+    color: $white;
+    background-color: black;
+    cursor: pointer;
+    padding: 0.3rem;
+}
+
+@mixin open {
+    display: $none;
+    position: absolute;
+    background-color: $list-color;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 20%;
+    z-index: 100;
+}

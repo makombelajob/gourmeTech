@@ -1,12 +1,13 @@
 <!doctype html>
 <html lang="fr">
+
 <head>
     <!-- Définition de l'encodage de caractères -->
     <meta charset="UTF-8">
 
     <!-- Définition de la vue pour les appareils mobiles -->
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
     <!-- Déclaration de la compatibilité avec Internet Explorer -->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -22,75 +23,98 @@
 
     <title>Document</title> <!-- Titre de la page -->
 </head>
+
 <body id="body-recette">
-<!-- Section d'en-tête contenant le logo et le menu -->
-<header>
-    <h2>Version Mobile</h2>
-    <nav>
-        <!-- Lien vers la page d'accueil avec le logo -->
-        <a href="#"><span>G</span>GourmeTech</a>
+    <!-- Section d'en-tête contenant le logo et le menu -->
+    <header>
+        <h2>Version Mobile</h2>
+        <nav>
+            <!-- Lien vers la page d'accueil avec le logo -->
+            <a href="#"><span>G</span>GourmeTech</a>
 
-        <!-- Bouton pour changer de thème (mode sombre/clair) -->
-        <button aria-label="Changer de thème" id="theme">
-            🌙
-        </button>
+            <!-- Bouton pour changer de thème (mode sombre/clair) -->
+            <button aria-label="Changer de thème" id="theme">
+                🌙
+            </button>
 
-        <!-- Menu déroulant avec les différentes pages de navigation -->
-        <div class="open">
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="ajouter-recette.html">Ajouter une recette</a></li>
-                <li><a href="favoris.html">Mes favoris</a></li>
-                <li><a href="a-propos.html">A propos</a></li>
-            </ul>
-            <!-- Bouton pour fermer le menu -->
-            <button id="close">X</button>
+            <!-- Menu déroulant avec les différentes pages de navigation -->
+            <div class="open">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="ajouter-recette.html">Ajouter une recette</a></li>
+                    <li><a href="favoris.html">Mes favoris</a></li>
+                    <li><a href="a-propos.html">A propos</a></li>
+                </ul>
+                <!-- Bouton pour fermer le menu -->
+                <button id="close">X</button>
+            </div>
+
+            <!-- Icône hamburger pour ouvrir le menu sur mobile -->
+            <svg id="burger" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+            </svg>
+        </nav>
+
+        <!-- Formulaire de recherche pour trouver une recette -->
+        <form action="">
+            <input type="text" placeholder="Recherche une recette">
+            <button type="submit">Recherche</button>
+        </form>
+    </header>
+
+    <main>
+        <!-- Section affichant une recette particulière -->
+        <section id="recette">
+            <h2>Une recette en particulier</h2>
+
+            <!-- Article contenant les informations d'une recette spécifique -->
+            <article data-id="2" data-category="plat" data-time="45" data-difficulty="moyen">
+                <!-- Bouton pour ajouter aux favoris -->
+                <button class="fav-btn" aria-label="Ajouter aux favoris">❤️</button>
+                <figure>
+                    <!-- Image de la recette -->
+                    <img src="assets/images/2.jpg" type="image/png" alt="Image d'un plat">
+                    <figcaption>
+                        <h3>Ratatouille provençale</h3>
+                        <div>
+                            <!-- Détails sur la recette : catégorie, temps de préparation, difficulté -->
+                            <span>Plat</span>
+                            <span>45 min</span>
+                            <span>Moyen</span>
+                        </div>
+                    </figcaption>
+                </figure>
+                <!-- Lien vers la page de la recette complète -->
+                <a href="recette.html" class="voir">Voir la recette</a>
+            </article>
+        </section>
+    </main>
+
+    <!-- Section du pied de page avec les informations de copyright -->
+    <footer>
+        <div class="nav">
+            <div>
+                <h2>Navigation</h2>
+                <ul>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="ajouter-recette.html">Ajouter une recette</a></li>
+                    <li><a href="favoris.html">Mes favoris</a></li>
+                    <li><a href="a-propos.html">A propos</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2>A propos de GourmeTech</h2>
+                <p>GourmeTech est une plateforme de recettes culinaires interactive développée dans le cadre d'un projet pédagogique.</p>
+            </div>
         </div>
 
-        <!-- Icône hamburger pour ouvrir le menu sur mobile -->
-        <svg id="burger" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
-        </svg>
-    </nav>
-
-    <!-- Formulaire de recherche pour trouver une recette -->
-    <form action="">
-        <input type="text" placeholder="Recherche une recette">
-        <button type="submit">Recherche</button>
-    </form>
-</header>
-
-<main>
-    <!-- Section affichant une recette particulière -->
-    <section id="recette">
-        <h2>Une recette en particulier</h2>
-
-        <!-- Article contenant les informations d'une recette spécifique -->
-        <article data-id="2" data-category="plat" data-time="45" data-difficulty="moyen">
-            <!-- Bouton pour ajouter aux favoris -->
-            <button class="fav-btn" aria-label="Ajouter aux favoris">❤️</button>
-            <figure>
-                <!-- Image de la recette -->
-                <img src="assets/images/2.jpg" type="image/png" alt="Image d'un plat">
-                <figcaption>
-                    <h3>Ratatouille provençale</h3>
-                    <div>
-                        <!-- Détails sur la recette : catégorie, temps de préparation, difficulté -->
-                        <span>Plat</span>
-                        <span>45 min</span>
-                        <span>Moyen</span>
-                    </div>
-                </figcaption>
-            </figure>
-            <!-- Lien vers la page de la recette complète -->
-            <a href="recette.html" class="voir">Voir la recette</a>
-        </article>
-    </section>
-</main>
-
-<!-- Section du pied de page avec les informations de copyright -->
-<footer>
-    <p>&copy; GourmeTech - Tous droits réservés</p>
-</footer>
+        <!-- Copyright et droits réservés -->
+        <div class="copy">
+            <p>&copy; GourmeTech - Tous droits réservés</p>
+        </div>
+    </footer>
 </body>
+
 </html>

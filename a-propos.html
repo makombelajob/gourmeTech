@@ -1,12 +1,13 @@
 <!doctype html>
 <html lang="fr">
+
 <head>
     <!-- Déclaration de l'encodage des caractères -->
     <meta charset="UTF-8">
 
     <!-- Paramètres pour rendre le site responsive -->
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
     <!-- Assure la compatibilité avec IE -->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -19,130 +20,214 @@
 
     <!-- Inclusion du fichier JavaScript -->
     <script src="js/script.js" type="module"></script>
+    <script src="js/Components/FormContact.js" defer></script>
 
     <!-- Titre de la page -->
     <title>Document</title>
 </head>
+
 <body>
-<!-- Début de l'en-tête de la page -->
-<header>
-    <!-- Titre principal de l'en-tête -->
-    <h2>Version Mobile</h2>
+    <!-- Début de l'en-tête de la page -->
+    <header>
+        <!-- Titre principal de l'en-tête -->
+        <h2>Version Mobile</h2>
 
-    <!-- Début du menu de navigation -->
-    <nav>
-        <!-- Lien vers la page d'accueil -->
-        <a href="#"><span>G</span>GourmeTech</a>
+        <!-- Début du menu de navigation -->
+        <nav>
+            <!-- Lien vers la page d'accueil -->
+            <a href="#"><span>G</span>GourmeTech</a>
 
-        <!-- Bouton pour changer le thème -->
-        <button aria-label="Changer de thème" id="theme">
-            🌙
-        </button>
+            <!-- Bouton pour changer le thème -->
+            <button aria-label="Changer de thème" id="theme">
+                🌙
+            </button>
 
-        <!-- Menu déroulant -->
-        <div class="open">
-            <ul>
-                <!-- Lien vers la page d'accueil -->
-                <li><a href="index.html">Accueil</a></li>
-                <!-- Lien pour ajouter une recette -->
-                <li><a href="ajouter-recette.html">Ajouter une recette</a></li>
-                <!-- Lien vers les favoris de l'utilisateur -->
-                <li><a href="favoris.html">Mes favoris</a></li>
-                <!-- Lien vers la page "A propos" -->
-                <li><a href="a-propos.html">A propos</a></li>
-            </ul>
-            <!-- Bouton pour fermer le menu -->
-            <button id="close">X</button>
+            <!-- Menu déroulant -->
+            <div class="open">
+                <ul>
+                    <!-- Lien vers la page d'accueil -->
+                    <li><a href="index.html">Accueil</a></li>
+                    <!-- Lien pour ajouter une recette -->
+                    <li><a href="ajouter-recette.html">Ajouter une recette</a></li>
+                    <!-- Lien vers les favoris de l'utilisateur -->
+                    <li><a href="favoris.html">Mes favoris</a></li>
+                    <!-- Lien vers la page "A propos" -->
+                    <li><a href="a-propos.html">A propos</a></li>
+                </ul>
+                <!-- Bouton pour fermer le menu -->
+                <button id="close">X</button>
+            </div>
+
+            <!-- Icône burger pour ouvrir le menu -->
+            <svg id="burger" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+            </svg>
+        </nav>
+
+        <!-- Formulaire de recherche -->
+        <form action="">
+            <input type="text" placeholder="Recherche une recette">
+            <button type="submit">Recherche</button>
+        </form>
+    </header>
+
+    <!-- Début de la section principale -->
+    <main>
+        <!-- Section principale "A propos" -->
+        <section id="contactform">
+            <!-- Titre de la section "A propos" -->
+            <h2>A propos de Nous</h2>
+
+            <!-- Article présentant l'entreprise -->
+            <article>
+                <p>GourmeTech est une plateforme de recettes culinaires interactive développée dans le cadre d'un projet
+                    pédagogique.
+                </p>
+            </article>
+
+            <!-- Article contenant le formulaire de contact -->
+            <article >
+                <h2>Nous contacter</h2>
+                <form action="" id="contact">
+                    <!-- Champ pour le nom -->
+                    <div>
+                        <div class="label">
+                            <label for="name">Nom</label>
+                        </div>
+                        <div class="input-grp">
+                            <input type="text" id="name" placeholder="entrez votre nom">
+                            <!-- Indicateur de validation lorsque le champ est valide -->
+                            <div class="is-valid" id="valid-name">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="green"
+                                     class="bi bi-check2-circle " viewBox="0 0 16 16">
+                                    <path
+                                            d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0" />
+                                    <path
+                                            d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0z" />
+                                </svg>
+                            </div>
+                            <!-- Indicateur d'erreur lorsque le champ est invalide -->
+                            <div class="is-invalid" id="invalid-name">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="red"
+                                     class="bi bi-exclamation-diamond is-invalid" viewBox="0 0 16 16">
+                                    <path
+                                            d="M6.95.435c.58-.58 1.52-.58 2.1 0l6.515 6.516c.58.58.58 1.519 0 2.098L9.05 15.565c-.58.58-1.519.58-2.098 0L.435 9.05a1.48 1.48 0 0 1 0-2.098zm1.4.7a.495.495 0 0 0-.7 0L1.134 7.65a.495.495 0 0 0 0 .7l6.516 6.516a.495.495 0 0 0 .7 0l6.516-6.516a.495.495 0 0 0 0-.7L8.35 1.134z" />
+                                    <path
+                                            d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0M7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z" />
+                                </svg>
+                            </div>
+                            <!-- Message d'erreur si le nom est trop court -->
+                            <div class="feedback" id="feedback-name">
+                                Le nom doit contenir plus ou moins 5 caractères
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Champ pour l'email -->
+                    <div>
+                        <div class="label">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="input-grp">
+                            <input type="text" id="email" placeholder="entrez votre email">
+                            <!-- Indicateur de validation lorsque le champ est valide -->
+                            <div class="is-valid" id="valid-email">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="green"
+                                     class="bi bi-check2-circle " viewBox="0 0 16 16">
+                                    <path
+                                            d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0" />
+                                    <path
+                                            d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0z" />
+                                </svg>
+                            </div>
+                            <!-- Indicateur d'erreur lorsque le champ est invalide -->
+                            <div class="is-invalid" id="invalid-email">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="red"
+                                     class="bi bi-exclamation-diamond is-invalid" viewBox="0 0 16 16">
+                                    <path
+                                            d="M6.95.435c.58-.58 1.52-.58 2.1 0l6.515 6.516c.58.58.58 1.519 0 2.098L9.05 15.565c-.58.58-1.519.58-2.098 0L.435 9.05a1.48 1.48 0 0 1 0-2.098zm1.4.7a.495.495 0 0 0-.7 0L1.134 7.65a.495.495 0 0 0 0 .7l6.516 6.516a.495.495 0 0 0 .7 0l6.516-6.516a.495.495 0 0 0 0-.7L8.35 1.134z" />
+                                    <path
+                                            d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0M7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z" />
+                                </svg>
+                            </div>
+                            <!-- Message d'erreur si l'email n'est pas valide -->
+                            <div class="feedback" id="feedback-email">
+                                L'email doit être valide
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Le champs de message -->
+                    <div>
+                        <div class="label">
+                            <label for="msg">Message</label>
+                        </div>
+                        <div class="input-grp">
+                            <textarea type="text" id="msg" cols="30" rows="10"></textarea>
+                            <!-- Indicateur de validation lorsque le champ est valide -->
+                            <div class="is-valid" id="valid-msg">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="green"
+                                     class="bi bi-check2-circle " viewBox="0 0 16 16">
+                                    <path
+                                            d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0" />
+                                    <path
+                                            d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0z" />
+                                </svg>
+                            </div>
+                            <!-- Indicateur d'erreur lorsque le champ est invalide -->
+                            <div class="is-invalid" id="invalid-msg">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="red"
+                                     class="bi bi-exclamation-diamond is-invalid" viewBox="0 0 16 16">
+                                    <path
+                                            d="M6.95.435c.58-.58 1.52-.58 2.1 0l6.515 6.516c.58.58.58 1.519 0 2.098L9.05 15.565c-.58.58-1.519.58-2.098 0L.435 9.05a1.48 1.48 0 0 1 0-2.098zm1.4.7a.495.495 0 0 0-.7 0L1.134 7.65a.495.495 0 0 0 0 .7l6.516 6.516a.495.495 0 0 0 .7 0l6.516-6.516a.495.495 0 0 0 0-.7L8.35 1.134z" />
+                                    <path
+                                            d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0M7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z" />
+                                </svg>
+                            </div>
+                            <!-- Message d'erreur si le message est vide -->
+                            <div class="feedback" id="feedback-msg">
+                                Le nom doit contenir plus ou moins 5 caractères
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rgpd">
+                        <input type="checkbox" id="rgpd">
+                        <label for="rgpd">J'acceptes les conditions RGPD</label>
+                        <div class="feedback" id="feedback-rgpd">
+                            Vous devez cocher cette case
+                        </div>
+                    </div>
+                    <div class="submit">
+                        <button type="submit" id="submit" disabled>Envoyer</button>
+                    </div>
+                </form>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <div class="nav">
+            <div>
+                <h2>Navigation</h2>
+                <ul>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="ajouter-recette.html">Ajouter une recette</a></li>
+                    <li><a href="favoris.html">Mes favoris</a></li>
+                    <li><a href="a-propos.html">A propos</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2>A propos de GourmeTech</h2>
+                <p>GourmeTech est une plateforme de recettes culinaires interactive développée dans le cadre d'un projet
+                    pédagogique.</p>
+            </div>
         </div>
 
-        <!-- Icône burger pour ouvrir le menu -->
-        <svg id="burger" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
-        </svg>
-    </nav>
-
-    <!-- Formulaire de recherche -->
-    <form action="">
-        <input type="text" placeholder="Recherche une recette">
-        <button type="submit">Recherche</button>
-    </form>
-</header>
-
-<!-- Début de la section principale -->
-<main>
-    <!-- Section principale "A propos" -->
-    <section>
-        <!-- Titre de la section "A propos" -->
-        <h2>A propos de Nous</h2>
-
-        <!-- Article présentant l'entreprise -->
-        <article>
-            <p>GourmeTech est une plateforme de recettes culinaires interactive développée dans le cadre d'un projet pédagogique.</p>
-        </article>
-
-        <!-- Article contenant le formulaire de contact -->
-        <article id="contactform">
-            <h2>Nous contacter</h2>
-            <form action="" id="contact">
-                <!-- Champ pour le nom -->
-                <div class="name">
-                    <label for="name">Nom</label>
-                    <input type="text" id="name" placeholder="entrez votre nom">
-                    <!-- Indicateur de validation lorsque le champ est valide -->
-                    <div class="is-valid">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="green" class="bi bi-check2-circle " viewBox="0 0 16 16">
-                            <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0"/>
-                            <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0z"/>
-                        </svg>
-                    </div>
-                    <!-- Indicateur d'erreur lorsque le champ est invalide -->
-                    <div class="is-invalid">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="red" class="bi bi-exclamation-diamond is-invalid" viewBox="0 0 16 16">
-                            <path d="M6.95.435c.58-.58 1.52-.58 2.1 0l6.515 6.516c.58.58.58 1.519 0 2.098L9.05 15.565c-.58.58-1.519.58-2.098 0L.435 9.05a1.48 1.48 0 0 1 0-2.098zm1.4.7a.495.495 0 0 0-.7 0L1.134 7.65a.495.495 0 0 0 0 .7l6.516 6.516a.495.495 0 0 0 .7 0l6.516-6.516a.495.495 0 0 0 0-.7L8.35 1.134z"/>
-                            <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0M7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z"/>
-                        </svg>
-                    </div>
-                    <!-- Message d'erreur si le nom est trop court -->
-                    <div class="invalid-feedback">
-                        Le nom doit contenir au moins 5 caractères
-                    </div>
-                </div>
-
-                <!-- Champ pour l'email -->
-                <div class="email">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="Entrez votre email">
-                    <!-- Indicateur de validation pour l'email -->
-                    <div class="is-valid">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="green" class="bi bi-check2-circle " viewBox="0 0 16 16">
-                            <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0"/>
-                            <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0z"/>
-                        </svg>
-                    </div>
-                    <!-- Indicateur d'erreur pour un email invalide -->
-                    <div class="is-invalid">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="red" class="bi bi-exclamation-diamond is-invalid" viewBox="0 0 16 16">
-                            <path d="M6.95.435c.58-.58 1.52-.58 2.1 0l6.515 6.516c.58.58.58 1.519 0 2.098L9.05 15.565c-.58.58-1.519.58-2.098 0L.435 9.05a1.48 1.48 0 0 1 0-2.098zm1.4.7a.495.495 0 0 0-.7 0L1.134 7.65a.495.495 0 0 0 0 .7l6.516 6.516a.495.495 0 0 0 .7 0l6.516-6.516a.495.495 0 0 0 0-.7L8.35 1.134z"/>
-                            <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0M7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z"/>
-                        </svg>
-                    </div>
-                    <!-- Message d'erreur pour un email invalide -->
-                    <div class="invalid-feedback">
-                        Le mail doit être valide
-                    </div>
-                </div>
-
-                <!-- Champ pour le message -->
-                <div class="msg">
-                    <label for="msg">Message</label>
-                    <textarea name="msg" id="msg" cols="30" rows="10"></textarea>
-                </div>
-
-                <!-- Bouton pour soumettre le formulaire -->
-                <button type="submit">Envoyer</button>
-            </form>
-        </article>
-    </section>
-</main>
+        <!-- Copyright et droits réservés -->
+        <div class="copy">
+            <p>&copy; GourmeTech - Tous droits réservés</p>
+        </div>
+    </footer>
 </body>
+
 </html>

@@ -1,3 +1,4 @@
+@import 'mixins';
 $black : #959997;
 $green : #49c880;
 $blue : #3898d4;
@@ -57,14 +58,7 @@ body{
             }
             
             .open{
-                display: $none;
-                position: absolute;
-                background-color: $list-color;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 20%;
-                z-index: 100;
+                @include open;
                 li{
                     padding: 1.5rem;
                     margin-left: 1rem;
@@ -73,15 +67,7 @@ body{
                     }
                 }
                 #close{
-                    position: inherit;
-                    top: 0.7rem;
-                    left: 0.7rem;
-                    border: $none;
-                    border-radius: 50%;
-                    color: $white;
-                    background-color: black;
-                    cursor: pointer;
-                    padding: 0.3rem;
+                    @include close;
                 }
             }
             #burger{
@@ -94,28 +80,10 @@ body{
                 width: 100%;
             }
             input{
-                box-sizing: border-box;
-                padding: 0.375rem 0.75rem ;
-                font-size: 1rem;
-                line-height: 1.5;
-                color: #495057;
-                background-color: #fff;
-                border: 1px solid #ced4da;
-                border-radius: 0.25rem;
-                &:focus{
-                    border-color: #80bdff;
-                    outline: none;
-                    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
-                }
+                @include input-style;
             }
             button{
-                background-color: $main-color;
-                color: $white;
-                border: $none;
-                border-radius: 0.3rem;
-                margin-block: 0.5rem;
-                cursor: $pointer;
-                padding-block: 0.5rem;
+                @include button-style;
             }
         }
     }
@@ -135,8 +103,6 @@ body{
     #recette,
     .favoris{
         article{
-            background-color: rgba(128, 128, 128, 0.22);
-            border-radius: 0.6rem;
             margin: 1rem;
             position: relative;
             
@@ -188,67 +154,57 @@ body{
     
     #contactform{
         margin-block: 1rem;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
-        
         h2{
-            text-align: $center;
+            @include h2;
+        }
+        article:first-of-type{
+            font-size: 1.1rem;
+            color: $black;
         }
         form{
-            background-color: rgba(128, 128, 128, 0.36);
-            padding: 1rem;
-            border-radius: 1rem;
-            input:not([type="checkbox"]),
-            textarea{
-                width: 100%;
-                box-sizing: border-box;
+            background-color: rgba(210, 105, 30, 0.17);
+            border-radius: 0.3rem;
+            padding-inline: 0.5rem;
+            > div {
+                margin-bottom: 1rem;
             }
-            input:not([type="checkbox"]){
-                height: 30px;
+            .label{
+                font-size: 1.3rem;
+                padding-block: 0.7rem;
             }
-            .invalid-feedback{
-                color: red;
-                display: $none;
-            }
-            .name,
-            .email,
-            .msg,
-            .rgpd{
+            .input-grp{
                 position: relative;
-                width: 100%;
+                input,
+                textarea {
+                    &:not([type="checkbox"])
+                    {
+                        @include input-style;
+                    }
+                }
                 .is-valid,
-                .is-invalid{
-                    position: absolute;
-                    top: 25%;
-                    right: 0;
-                    display: $none;
-                }
-                &.msg{
-                    .is-valid,
-                    .is-invalid{
-                        top: 1.5rem;
+                .is-invalid {
+                    display: initial;
+                    &.is-valid,
+                    &.is-invalid{
+                        @include validation;
                     }
                 }
-                &.rgpd{
-                    .is-valid,
-                    .is-invalid{
-                        top: 0;
-                    }
+                .is-valid,
+                .feedback{
+                    display: none;
                 }
+                
+            }
+            .feedback{
+                color: red;
             }
             .submit{
-                text-align: $center;
+                text-align: center;
                 button{
-                    padding: 0.7rem;
-                    border: none;
-                    border-radius: 1rem;
-                    color: $white;
-                    background-color: $main-color;
-                    margin-block: 1rem;
-                    cursor: $pointer;
+                    @include sendBtn;
                 }
             }
+            
         }
     }
     footer{
@@ -295,22 +251,19 @@ body{
         }
         #hero{
             .level{
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
+                @include grid3fr;
                 h2{
                     grid-column: 1 / -1;
                 }
             }
         }
         #hero + section{
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+            @include grid2fr;
             margin: 0;
         }
         footer{
             div.nav{
-                display: grid;
-                grid-template-columns: 1fr 1fr;
+                @include grid2fr;
                 margin-left: 1rem;
                 h2{
                     grid-column: 1 / -1;
@@ -331,12 +284,11 @@ body{
     body{
         header{
             nav{
-                justify-content: flex-start;
                 .open{
                     position: unset;
                     background-color: unset;
                     z-index: 100;
-                    display: flex;
+                    display: block;
                     #close{
                         display: $none;
                     }
@@ -369,9 +321,7 @@ body{
         }
         main{
             #hero + section{
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-                
+                @include grid3fr;
             }
         }
     }

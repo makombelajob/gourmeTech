@@ -18,7 +18,7 @@ for (const favIcon of favIcons) {
 	const timer = favIcon.closest(".article").querySelector(".time");
 	const level = favIcon.closest(".article").querySelector(".level");
 	
-	// Récupération de l'ID unique du dataset
+	// Récupération de l'ID unique du dataset du button favoris
 	const favIconId = favIcon.dataset.favorisId;
 	const favIconName = favIcon.dataset.name;
 	

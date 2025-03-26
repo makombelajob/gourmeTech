@@ -24,6 +24,18 @@ for(const stockFavori of stockFavoris) {
 	favBtn.setAttribute("class", "fav-btn");
 	favBtn.textContent = "❤️";
 	favBtn.setAttribute("data-favoris-id", id);
+	favBtn.addEventListener("click", function() {
+		// Récupération de l'Id du button
+		const favIconId = Number(this.dataset.favorisId);
+		
+		// Mise à jour du stock et du localStorage
+		stockFavoris = stockFavoris.filter(fav => Number(fav.id) !== favIconId);
+		localStorage.setItem("id", JSON.stringify(stockFavoris));
+		
+		// Suppression de l'article
+		this.closest(".article").remove();
+		
+	});
 	
 	const image = init.querySelector("img");
 	image.setAttribute("src", `../../assets/images/${id}.jpg`);
@@ -48,7 +60,7 @@ for(const stockFavori of stockFavoris) {
 	const voirPlus = init.querySelector("a");
 	voirPlus.setAttribute("class", "voir");
 	voirPlus.textContent = "Voir la recette";
-	voirPlus.href = "a-propos.html";
+	voirPlus.href = "recette.html";
 	
 	displayFavori.appendChild(init);
 }

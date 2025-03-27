@@ -9,7 +9,12 @@ $white : white;
 $none : none;
 $center: center;
 $pointer: pointer;
+$bg-dark-theme: black;
+$bg-light-theme: white;
+$text-dark: black;
+
 :root {
+    font-size: 15px;
     --black: #{$black};
     --green: #{$green};
     --blue: #{$blue};
@@ -19,12 +24,24 @@ $pointer: pointer;
     --none: #{$none};
     --center: #{$center};
     --pointer: #{$pointer};
+    --bg-dark-theme: #{$bg-dark-theme};
+    --bg-light-theme: #{$bg-light-theme};
+    --text-dark: #{$text-dark}
 }
 img{
   width: 100%;
   vertical-align: middle;
 }
+.dark{
+    background-color: $bg-dark-theme;
+    color: $white;
+}
 body{
+    font-family: "Ubuntu", serif;
+    transition: background 0.3s, color 0.3s;
+    background-color: $bg-light-theme;
+    color: $bg-dark-theme;
+    
     .voir{
         text-decoration: $none;
         background-color: $main-color;
@@ -61,12 +78,10 @@ body{
             a{
                 text-decoration: $none;
                 color: $main-color;
-                span{
-                    background-color: $main-color;
-                    color: $white;
+                .logo{
+                    width: 30px;
                     border-radius: 50%;
-                    padding: 0.2rem;
-                    margin-right: 0.2rem;
+                    
                 }
             }
             #theme{

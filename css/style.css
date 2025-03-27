@@ -291,6 +291,33 @@ body #contactform form .submit button {
   background-color: #e67f22;
   cursor: pointer;
 }
+body #contactform article:last-of-type {
+  background-color: grey;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-block: 1rem;
+  gap: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+}
+body #contactform article:last-of-type h2 {
+  grid-column: 1/-1;
+}
+body #contactform article:last-of-type .faq-question .faq-btn {
+  border: none;
+  padding: 0.5rem 0.5rem;
+  border-radius: 0.5rem;
+  margin-block: 1rem;
+  color: white;
+  background-color: #e67f22;
+  cursor: pointer;
+}
+body #contactform article:last-of-type .faq-answer {
+  margin: 0;
+  display: none;
+  box-sizing: border-box;
+}
 body footer {
   padding: 0.5rem;
 }

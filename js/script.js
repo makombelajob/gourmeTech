@@ -20,5 +20,5 @@ filtreRecherche();
 // Fonctionnement du button favoris
 favBtn();
 
-// Fonctionnement du bouton de theme
+// Fonctionnement du bouton de changement theme
 theme();

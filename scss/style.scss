@@ -240,6 +240,28 @@ body{
             }
             
         }
+        article:last-of-type{
+            background-color: grey;
+            border-radius: 1rem;
+            padding: 1rem;
+            margin-block: 1rem;
+            gap: 1rem;
+            @include grid3fr;
+            align-items: $center;
+            h2{
+                grid-column: 1 / -1;
+            }
+            .faq-question{
+                .faq-btn{
+                    @include sendBtn;
+                }
+            }
+            .faq-answer{
+                margin: 0;
+                display: none;
+                box-sizing: border-box;
+            }
+        }
     }
     footer{
         padding: 0.5rem;

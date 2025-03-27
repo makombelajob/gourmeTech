@@ -162,6 +162,15 @@ body #hero .level h2 {
 body #hero .level label {
   color: #959997;
 }
+body section:last-of-type h2,
+body #recette h2,
+body #favorisDisplay h2 {
+  font-size: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  margin-block: 1rem;
+  color: #e67f22;
+}
 body section:last-of-type .article,
 body #recette .article,
 body #favorisDisplay .article {

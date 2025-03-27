@@ -146,6 +146,13 @@ body{
     section:last-of-type,
     #recette,
     #favorisDisplay{
+        h2{
+            font-size: 1.5rem;
+            text-align: center;
+            text-transform: uppercase;
+            margin-block: 1rem;
+            color: $main-color;
+        }
         .article{
             margin: 1rem;
             position: relative;

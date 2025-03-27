@@ -178,42 +178,52 @@ body #favorisDisplay .article .fav-btn {
   border: none;
   cursor: pointer;
 }
-body section:last-of-type .article img,
-body #recette .article img,
-body #favorisDisplay .article img {
+body section:last-of-type .article figure .slide .elements .element,
+body #recette .article figure .slide .elements .element,
+body #favorisDisplay .article figure .slide .elements .element {
+  display: none;
+}
+body section:last-of-type .article figure .slide .elements .element.active,
+body #recette .article figure .slide .elements .element.active,
+body #favorisDisplay .article figure .slide .elements .element.active {
+  display: block;
+}
+body section:last-of-type .article figure img,
+body #recette .article figure img,
+body #favorisDisplay .article figure img {
   border-radius: 1rem 1rem 0 0;
 }
-body section:last-of-type .article figcaption,
-body #recette .article figcaption,
-body #favorisDisplay .article figcaption {
+body section:last-of-type .article figure figcaption,
+body #recette .article figure figcaption,
+body #favorisDisplay .article figure figcaption {
   margin: 0.7rem 0.5rem;
 }
-body section:last-of-type .article figcaption .title,
-body #recette .article figcaption .title,
-body #favorisDisplay .article figcaption .title {
+body section:last-of-type .article figure figcaption .title,
+body #recette .article figure figcaption .title,
+body #favorisDisplay .article figure figcaption .title {
   padding-block: 1rem;
   font-size: 1.2rem;
 }
-body section:last-of-type .article figcaption span,
-body #recette .article figcaption span,
-body #favorisDisplay .article figcaption span {
+body section:last-of-type .article figure figcaption span,
+body #recette .article figure figcaption span,
+body #favorisDisplay .article figure figcaption span {
   color: white;
   padding: 0.3rem;
   border-radius: 1.5rem;
 }
-body section:last-of-type .article figcaption .type,
-body #recette .article figcaption .type,
-body #favorisDisplay .article figcaption .type {
+body section:last-of-type .article figure figcaption .type,
+body #recette .article figure figcaption .type,
+body #favorisDisplay .article figure figcaption .type {
   background-color: #e67f22;
 }
-body section:last-of-type .article figcaption .time,
-body #recette .article figcaption .time,
-body #favorisDisplay .article figcaption .time {
+body section:last-of-type .article figure figcaption .time,
+body #recette .article figure figcaption .time,
+body #favorisDisplay .article figure figcaption .time {
   background-color: #49c880;
 }
-body section:last-of-type .article figcaption .level,
-body #recette .article figcaption .level,
-body #favorisDisplay .article figcaption .level {
+body section:last-of-type .article figure figcaption .level,
+body #recette .article figure figcaption .level,
+body #favorisDisplay .article figure figcaption .level {
   background-color: #3898d4;
 }
 body #body-recette,

@@ -158,28 +158,40 @@ body{
                 border: $none;
                 cursor: $pointer;
             }
-            img{
-                border-radius: 1rem 1rem 0 0;
-            }
-            figcaption{
-                margin: 0.7rem 0.5rem;
-                .title{
-                    padding-block: 1rem;
-                    font-size: 1.2rem;
+            figure{
+                .slide{
+                    .elements{
+                        .element{
+                            display: $none;
+                            &.active{
+                                display: block;
+                            }
+                        }
+                    }
                 }
-                span{
-                    color: $white;
-                    padding: 0.3rem;
-                    border-radius: 1.5rem;
+                img{
+                    border-radius: 1rem 1rem 0 0;
                 }
-                .type{
-                    background-color: $main-color;
-                }
-                .time{
-                    background-color: $green;
-                }
-                .level{
-                    background-color: $blue;
+                figcaption{
+                    margin: 0.7rem 0.5rem;
+                    .title{
+                        padding-block: 1rem;
+                        font-size: 1.2rem;
+                    }
+                    span{
+                        color: $white;
+                        padding: 0.3rem;
+                        border-radius: 1.5rem;
+                    }
+                    .type{
+                        background-color: $main-color;
+                    }
+                    .time{
+                        background-color: $green;
+                    }
+                    .level{
+                        background-color: $blue;
+                    }
                 }
             }
             

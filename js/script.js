@@ -13,6 +13,10 @@ import {theme} from "./Components/theme.js";
 // L'import du filtre par input checkbox
 import {filtreInput} from "./Components/filtreRecherche.js";
 
+// Importation de la fonction slide pour les articles
+import {slideArticle} from "./Components/slideArticle.js";
+
+
 // Fonctionnement du burger
 Burger();
 
@@ -27,3 +31,6 @@ theme();
 
 // Fonctionnement input checkbox
 filtreInput();
+
+// Fonction slide des articles
+slideArticle();

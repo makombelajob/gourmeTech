@@ -245,8 +245,6 @@ body{
             border-radius: 1rem;
             padding: 1rem;
             margin-block: 1rem;
-            gap: 1rem;
-            @include grid3fr;
             align-items: $center;
             h2{
                 grid-column: 1 / -1;
@@ -257,9 +255,11 @@ body{
                 }
             }
             .faq-answer{
-                margin: 0;
                 display: none;
-                box-sizing: border-box;
+                p{
+                    color: $white;
+                    margin-block: 1rem;
+                }
             }
         }
     }
@@ -345,6 +345,14 @@ body{
                     }
                 }
             }
+            article:last-of-type{
+                box-sizing: border-box;
+                @include grid3fr;
+                gap: 1rem;
+                h2{
+                    grid-column: 1 / -1;
+                }
+            }
         }
         footer{
             div.nav{
@@ -368,6 +376,7 @@ body{
 @media(min-width: 1028px) {
     body{
         header{
+            color: $white;
             h2{
                 .mobile,
                 .tablet{
@@ -383,12 +392,16 @@ body{
                     background-color: unset;
                     z-index: 100;
                     display: block;
+                    
                     #close{
                         display: $none;
                     }
                     ul{
                         display: flex;
                         align-items: flex-start;
+                        li a{
+                            color: $white;
+                        }
                     }
                 }
                 #burger{

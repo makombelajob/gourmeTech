@@ -296,9 +296,6 @@ body #contactform article:last-of-type {
   border-radius: 1rem;
   padding: 1rem;
   margin-block: 1rem;
-  gap: 1rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
 }
 body #contactform article:last-of-type h2 {
@@ -314,9 +311,11 @@ body #contactform article:last-of-type .faq-question .faq-btn {
   cursor: pointer;
 }
 body #contactform article:last-of-type .faq-answer {
-  margin: 0;
   display: none;
-  box-sizing: border-box;
+}
+body #contactform article:last-of-type .faq-answer p {
+  color: white;
+  margin-block: 1rem;
 }
 body footer {
   padding: 0.5rem;
@@ -397,6 +396,15 @@ body footer div div ul a {
     margin: 0 0.3rem 0 0;
     padding: 0;
   }
+  body #contactform article:last-of-type {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+  }
+  body #contactform article:last-of-type h2 {
+    grid-column: 1/-1;
+  }
   body footer div.nav {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -415,6 +423,9 @@ body footer div div ul a {
   }
 }
 @media (min-width: 1028px) {
+  body header {
+    color: white;
+  }
   body header h2 .mobile,
   body header h2 .tablet {
     display: none;
@@ -434,6 +445,9 @@ body footer div div ul a {
   body header nav .open ul {
     display: flex;
     align-items: flex-start;
+  }
+  body header nav .open ul li a {
+    color: white;
   }
   body header nav #burger {
     display: none;

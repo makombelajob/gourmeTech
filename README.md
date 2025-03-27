@@ -1,4 +1,5 @@
 # GourmeTech
+Ceci est un projet de fin de la partie Front-End en développement Web et Web mobile que j'ai réalisé dans une durée de 3 jours.
 
 GourmeTech est une plateforme de recettes culinaires interactive permettant aux utilisateurs de rechercher, filtrer et sauvegarder leurs recettes préférées.
 

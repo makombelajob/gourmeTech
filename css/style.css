@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   font-size: 15px;
   --black: #959997;
@@ -26,10 +27,17 @@ img {
   color: white;
 }
 
+/* Style principale*/
 body {
   font-family: "Ubuntu", serif;
   transition: background 0.3s, color 0.3s;
   color: black;
+  /*  Style du header*/
+  /* Style de la première section avec le filtre*/
+  /* Style principale des articles dans la page*/
+  /* Style principale de la page recette et favoris*/
+  /* style principale du formulaire de contact */
+  /* Style principale du footer */
 }
 body .voir {
   text-decoration: none;
@@ -220,6 +228,7 @@ body #page-favoris main {
 }
 body #contactform {
   margin-block: 1rem;
+  /* Style principale du FAQ */
 }
 body #contactform h2 {
   text-align: center;
@@ -340,6 +349,7 @@ body footer div div ul a {
   text-decoration: none;
 }
 
+/* Breakpoint de la version tablette */
 @media (min-width: 768px) {
   body {
     height: 100vh;
@@ -425,6 +435,7 @@ body footer div div ul a {
     margin-block: 1rem;
   }
 }
+/* Breakpoint de la version desktop */
 @media (min-width: 1028px) {
   body header {
     color: white;

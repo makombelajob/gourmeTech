@@ -10,6 +10,7 @@ export function theme(){
 	
 	if(themeSaved) {
 		body.classList.add("dark");
+		//Cet else nous permet de passer en mode dark si c'est le mode du system
 	}/**else{
 		// Si aucun theme n'est sauvegarder on applique celui du système
 		const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;

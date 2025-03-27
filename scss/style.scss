@@ -40,6 +40,7 @@ img{
     color: $white;
 }
 
+/* Style principale*/
 body{
     font-family: "Ubuntu", serif;
     transition: background 0.3s, color 0.3s;
@@ -56,6 +57,7 @@ body{
         cursor: $pointer;
         padding-block: 1rem;
     }
+    /*  Style du header*/
     header{
         h2{
             border-radius: 2rem 2rem 0 0;
@@ -124,6 +126,8 @@ body{
             }
         }
     }
+
+    /* Style de la première section avec le filtre*/
     #hero{
         padding: 0.5rem;
         .level{
@@ -137,6 +141,8 @@ body{
             }
         }
     }
+
+    /* Style principale des articles dans la page*/
     section:last-of-type,
     #recette,
     #favorisDisplay{
@@ -180,6 +186,7 @@ body{
         }
     }
     
+    /* Style principale de la page recette et favoris*/
     #body-recette,
     #page-favoris{
         display: flex;
@@ -190,6 +197,7 @@ body{
         }
     }
     
+    /* style principale du formulaire de contact */
     #contactform{
         margin-block: 1rem;
         h2{
@@ -244,6 +252,7 @@ body{
             }
             
         }
+        /* Style principale du FAQ */
         article:last-of-type{
             background-color: grey;
             border-radius: 1rem;
@@ -267,6 +276,7 @@ body{
             }
         }
     }
+    /* Style principale du footer */
     footer{
         padding: 0.5rem;
         a,
@@ -290,6 +300,7 @@ body{
     }
 }
 
+/* Breakpoint de la version tablette */
 @media(min-width: 768px) {
     body{
         height: 100vh;
@@ -377,6 +388,8 @@ body{
         }
     }
 }
+/* Breakpoint de la version desktop */
+
 @media(min-width: 1028px) {
     body{
         header{

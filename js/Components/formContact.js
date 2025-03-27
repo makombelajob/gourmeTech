@@ -1,26 +1,48 @@
-
+// Initialisation de variable booléen qui stockeront nos valeurs
 let namevalid = emailValid = msgValid = rgpdValid = false;
 const btnSubmit = document.querySelector("#submit");
 
+/**
+ * fonction qui active le bouton si tout est valide
+ */
 function toutValid() {
 	btnSubmit.disabled = !(namevalid && emailValid && msgValid && rgpdValid);
 }
+
+/**
+ * cette fonction sert à l'affichage de message valid si valid
+ * @param {boolean} valid 
+ * @param {boolean} invalid 
+ * @param {boolean} feedback 
+ */
 function validInput(valid, invalid, feedback) {
 	valid.style.display = "block";
 	invalid.style.display = "none";
 	feedback.style.display = "none";
 }
+
+/**
+ * cette fonction sert à l'affichage de message invalid si invalid
+ * @param {boolean} valid 
+ * @param {boolean} invalid 
+ * @param {boolean} feedback 
+ */
 function invalidInput(valid, invalid, feedback) {
 	valid.style.display = "none";
 	invalid.style.display = "block";
 	feedback.style.display = "block";
 }
+
+// Récupération de valeur nom
 const nameUser =  document.querySelector("#name");
 nameUser.addEventListener("change", function() {
+
+	// Récupération des messages d'erreurs
 	const valid = document.querySelector("#valid-name");
 	const invalid = document.querySelector("#invalid-name");
 	const feedback = document.querySelector("#feedback-name");
 	
+	// Condition si le champs n'est pas correcte
 	if(this.value.length < 5 ){
 		invalidInput(valid, invalid, feedback);
 		namevalid = false;
@@ -31,6 +53,7 @@ nameUser.addEventListener("change", function() {
 	toutValid();
 });
 
+// Récupération de la valeur email
 const email = document.querySelector("#email");
 email.addEventListener("change", function() {
 	const valid = document.querySelector("#valid-email");
@@ -48,6 +71,7 @@ email.addEventListener("change", function() {
 	toutValid();
 });
 
+// Récupération de la valeur du message
 const message = document.querySelector("#msg");
 message.addEventListener("change", function() {
 	const valid = document.querySelector("#valid-msg");
@@ -64,6 +88,7 @@ message.addEventListener("change", function() {
 	toutValid();
 });
 
+// Récupération du rgpd 
 const rgpd = document.querySelector("#rgpd");
 rgpd.addEventListener("change", function () {
 	const feedback = document.querySelector("#feedback-rgpd");
@@ -77,6 +102,7 @@ rgpd.addEventListener("change", function () {
 	toutValid();
 });
 
+// Récuperation du formulaire en entier
 const form = document.querySelector("#contact");
 form.addEventListener("submit", function(event) {
 	event.preventDefault();

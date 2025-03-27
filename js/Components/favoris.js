@@ -38,14 +38,18 @@ for(const stockFavori of stockFavoris) {
 		
 	});
 	
+	// initialisation de l'image
 	const image = init.querySelector("img");
 	image.setAttribute("src", `../../assets/images/${id}.jpg`);
 	image.setAttribute("alt", name);
 	
+	// Initialisation du titre
 	const title = init.querySelector("h3");
 	title.setAttribute("class", "title");
 	title.textContent = name;
 	
+
+	// Initialisation des catégories
 	const spanType = init.querySelector("span:first-of-type");
 	spanType.setAttribute("class", "type");
 	spanType.textContent = type;
@@ -58,10 +62,12 @@ for(const stockFavori of stockFavoris) {
 	spanLevel.setAttribute("class", "level");
 	spanLevel.textContent = level;
 	
+	// initialisation du button voir la recette
 	const voirPlus = init.querySelector("a");
 	voirPlus.setAttribute("class", "voir");
 	voirPlus.textContent = "Voir la recette";
 	voirPlus.href = "recette.html";
 	
+	// Affichage des élément sur la page web
 	displayFavori.appendChild(init);
 }

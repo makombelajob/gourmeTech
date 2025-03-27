@@ -1,3 +1,4 @@
+// Récupération des button fas pour ajouter un écouteur 
 const faqBtns = document.querySelectorAll(".faq-btn");
 for(const faqBtn of faqBtns ) {
 	faqBtn.addEventListener("click", function() {

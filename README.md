@@ -22,7 +22,7 @@ GourmeTech est une plateforme de recettes culinaires interactive permettant aux 
 
 1. **Cloner le dépôt** :
    ```sh
-   git clone https://github.com/votre-utilisateur/gourmetech.git
+   git clone https://github.com/makombelajob/gourmeTech.git
    ```
 
 2. **Ouvrir le fichier `index.html` dans un navigateur**.

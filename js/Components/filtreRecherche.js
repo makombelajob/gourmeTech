@@ -32,3 +32,46 @@ export function filtreRecherche() {
 	});
 	
 }
+export function filtreInput(){
+	const articles = document.querySelectorAll(".article");
+	const inputs = document.querySelectorAll("#hero input");
+	for(const input of inputs){
+		input.addEventListener("click", function() {
+			
+			// Récupérer le filtre en cliquant
+			const activeFiltre = {
+				category: [],
+				difficulty: [],
+				time: []
+			}
+			if(input.checked){
+				if(["entry", "plat", "dessert"].includes(input.dataset.name)){
+					activeFiltre.category.push(input.dataset.name);
+				}
+				if(["facile", "moyen", "difficile"].includes(input.dataset.name)){
+					activeFiltre.difficulty.push(input.dataset.name);
+				}
+				if(["quick", "middle", "long"].includes(input.dataset.name)){
+					activeFiltre.time.push(input.dataset.name);
+				}
+			}
+			
+			for(const article of articles){
+				const category = article.dataset.category;
+				const difficulty = article.dataset.difficulty;
+				const time = Number(article.dataset.time);
+				
+				
+				const matchCategory = activeFiltre.category.length ===0 || activeFiltre.category.includes(category);
+				const matchDifficulty = activeFiltre.difficulty.length ===0 || activeFiltre.difficulty.includes(difficulty);
+				const matchTime = activeFiltre.time.length === 0 ||
+					(time < 30 && activeFiltre.time.includes("quick")) ||
+					(time >= 30 && time <= 60 && activeFiltre.time.includes("middle")) ||
+					(time > 60 && activeFiltre.time.includes("long"));
+				
+				article.style.display = (matchCategory && matchDifficulty && matchTime) ? "block" : "none";
+			}
+			
+		});
+	}
+}

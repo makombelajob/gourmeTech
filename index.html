@@ -82,45 +82,45 @@
             <div class="category level">
                 <h2>Catégorie</h2>
                 <article>
-                    <input type="checkbox" id="entry">
+                    <input type="checkbox" data-name="entry" id="entry">
                     <label for="entry">Entrée</label>
                 </article>
                 <article>
-                    <input type="checkbox" id="plat">
+                    <input type="checkbox" data-name="plat" id="plat">
                     <label for="plat">Plat</label>
                 </article>
                 <article>
-                    <input type="checkbox" id="dessert">
+                    <input type="checkbox" data-name="dessert" id="dessert">
                     <label for="dessert">Dessert</label>
                 </article>
             </div>
             <div class="cooktime level">
                 <h2>Temps de préparation</h2>
                 <article>
-                    <input type="checkbox" id="quick">
+                    <input type="checkbox" data-name="quick" id="quick">
                     <label for="quick">Rapide(<30 min)</label>
                 </article>
                 <article>
-                    <input type="checkbox" id="middle">
+                    <input type="checkbox" data-name="middle" id="middle">
                     <label for="middle">Moyen(30-60 min)</label>
                 </article>
                 <article>
-                    <input type="checkbox" id="long">
+                    <input type="checkbox" data-name="long" id="long">
                     <label for="long">Long(>60 min)</label>
                 </article>
             </div>
             <div class="difficulty level">
                 <h2>Difficulté</h2>
                 <article>
-                    <input type="checkbox" id="easy">
+                    <input type="checkbox" data-name="facile" id="easy">
                     <label for="easy">Facile</label>
                 </article>
                 <article>
-                    <input type="checkbox" id="easyMiddle">
+                    <input type="checkbox" data-name="moyen" id="easyMiddle">
                     <label for="easyMiddle">Moyen</label>
                 </article>
                 <article>
-                    <input type="checkbox" id="hard">
+                    <input type="checkbox" data-name="difficile" id="hard">
                     <label for="hard">Difficile</label>
                 </article>
             </div>
@@ -136,9 +136,9 @@
                     <figcaption>
                         <h3 class="title">Tarte au pomme</h3>
                         <div>
-                            <span class="type">Dessert</span>
-                            <span class="time">60 min</span>
-                            <span class="level">Facile</span>
+                            <span data-name="dessert" class="type">Dessert</span>
+                            <span data-name="long" class="time">60 min</span>
+                            <span data-name="facile" class="level">Facile</span>
                         </div>
                     </figcaption>
                 </figure>
@@ -154,25 +154,25 @@
                     <figcaption>
                         <h3 class="title">Ratatouille provençale</h3>
                         <div>
-                            <span class="type">Plat</span>
-                            <span class="time">45 min</span>
-                            <span class="level">Moyen</span>
+                            <span data-name="plat" class="type">Plat</span>
+                            <span data-name="middle" class="time">45 min</span>
+                            <span data-name="moyen" class="level">Moyen</span>
                         </div>
                     </figcaption>
                 </figure>
                 <a href="recette.html" class="voir">Voir la recette</a>
             </article>
 
-            <article class="article" data-id="3" data-category="entrée" data-time="30" data-difficulty="facile">
+            <article class="article" data-id="3" data-category="entry" data-time="30" data-difficulty="facile">
                 <button data-favoris-id="3" data-name="Velouté de potiron" class="fav-btn" aria-label="Ajouter aux favoris">❤</button>
                 <figure>
                     <img src="assets/images/3.jpg" alt="Image d'un plat">
                     <figcaption>
                         <h3 class="title">Velouté de potiron</h3>
                         <div>
-                            <span class="type">Entrée</span>
-                            <span class="time">30 min</span>
-                            <span class="level">Facile</span>
+                            <span data-name="entry" class="type">Entrée</span>
+                            <span data-name="quick" class="time">30 min</span>
+                            <span data-name="facile" class="level">Facile</span>
                         </div>
                     </figcaption>
                 </figure>
@@ -186,9 +186,9 @@
                     <figcaption>
                         <h3 class="title">Cassoulé</h3>
                         <div>
-                            <span class="type">Plat</span>
-                            <span class="time">40 min</span>
-                            <span class="level">Moyen</span>
+                            <span data-name="plat" class="type">Plat</span>
+                            <span data-name="middle" class="time">40 min</span>
+                            <span data-name="moyen" class="level">Moyen</span>
                         </div>
                     </figcaption>
                 </figure>

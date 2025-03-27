@@ -10,13 +10,13 @@ export function theme(){
 	
 	if(themeSaved) {
 		body.classList.add("dark");
-	}else{
+	}/**else{
 		// Si aucun theme n'est sauvegarder on applique celui du système
 		const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
 		if(systemTheme){
 			body.classList.add("dark");
 		}
-	}
+	}**/
 	
 	// Ajouter un écouteur d'événement sur le bouton
 	themeBtn.addEventListener("click", () => {

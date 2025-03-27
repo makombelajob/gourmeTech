@@ -16,6 +16,11 @@ img {
   vertical-align: middle;
 }
 
+.dark header nav .open a,
+.dark #hero .level h2 {
+  color: white;
+}
+
 .dark {
   background-color: black;
   color: white;
@@ -89,7 +94,7 @@ body header nav .open li {
 }
 body header nav .open li a {
   text-decoration: none;
-  color: #959997;
+  color: black;
 }
 body header nav .open #close {
   position: inherit;
@@ -144,7 +149,7 @@ body #hero .level {
 }
 body #hero .level h2 {
   padding-block: 0.5rem;
-  color: #959997;
+  color: black;
 }
 body #hero .level label {
   color: #959997;

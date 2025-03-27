@@ -31,6 +31,10 @@ img{
   width: 100%;
   vertical-align: middle;
 }
+.dark header nav .open a,
+.dark #hero .level h2{
+    color: $white;
+}
 .dark{
     background-color: $bg-dark-theme;
     color: $white;
@@ -96,7 +100,7 @@ body{
                     margin-left: 1rem;
                     a{
                         text-decoration: none;
-                        color: $black;
+                        color: black;
                     }
                 }
                 #close{
@@ -126,7 +130,7 @@ body{
             padding-block: 0.5rem;
             h2{
                 padding-block: 0.5rem;
-                color: $black;
+                color: black;
             }
             label{
                 color: $black;

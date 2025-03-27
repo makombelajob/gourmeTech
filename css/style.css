@@ -3,15 +3,12 @@
   --black: #959997;
   --green: #49c880;
   --blue: #3898d4;
-  --main-color: #e67f22;
   --list-color: rgba(230, 145, 34, 0.83);
   --white: white;
   --none: none;
   --center: center;
   --pointer: pointer;
   --bg-dark-theme: black;
-  --bg-light-theme: white;
-  --text-dark: black ;
 }
 
 img {
@@ -27,7 +24,6 @@ img {
 body {
   font-family: "Ubuntu", serif;
   transition: background 0.3s, color 0.3s;
-  background-color: white;
   color: black;
 }
 body .voir {
@@ -63,11 +59,11 @@ body header nav {
   align-items: center;
   padding: 0.5rem;
 }
-body header nav a {
+body header nav > a {
   text-decoration: none;
   color: #e67f22;
 }
-body header nav a .logo {
+body header nav > a .logo {
   width: 30px;
   border-radius: 50%;
 }
@@ -92,7 +88,8 @@ body header nav .open li {
   margin-left: 1rem;
 }
 body header nav .open li a {
-  color: black;
+  text-decoration: none;
+  color: #959997;
 }
 body header nav .open #close {
   position: inherit;
@@ -147,6 +144,7 @@ body #hero .level {
 }
 body #hero .level h2 {
   padding-block: 0.5rem;
+  color: #959997;
 }
 body #hero .level label {
   color: #959997;
@@ -445,9 +443,6 @@ body footer div div ul a {
   body header nav .open ul {
     display: flex;
     align-items: flex-start;
-  }
-  body header nav .open ul li a {
-    color: white;
   }
   body header nav #burger {
     display: none;

@@ -10,23 +10,22 @@ $none : none;
 $center: center;
 $pointer: pointer;
 $bg-dark-theme: black;
-$bg-light-theme: white;
-$text-dark: black;
+
 
 :root {
     font-size: 15px;
     --black: #{$black};
     --green: #{$green};
     --blue: #{$blue};
-    --main-color: #{$main-color};
     --list-color: #{$list-color};
     --white: #{$white};
     --none: #{$none};
     --center: #{$center};
     --pointer: #{$pointer};
+    
+    // default
     --bg-dark-theme: #{$bg-dark-theme};
-    --bg-light-theme: #{$bg-light-theme};
-    --text-dark: #{$text-dark}
+
 }
 img{
   width: 100%;
@@ -36,12 +35,11 @@ img{
     background-color: $bg-dark-theme;
     color: $white;
 }
+
 body{
     font-family: "Ubuntu", serif;
     transition: background 0.3s, color 0.3s;
-    background-color: $bg-light-theme;
     color: $bg-dark-theme;
-    
     .voir{
         text-decoration: $none;
         background-color: $main-color;
@@ -75,7 +73,7 @@ body{
             justify-content: space-between;
             align-items: $center;
             padding: 0.5rem;
-            a{
+            > a{
                 text-decoration: $none;
                 color: $main-color;
                 .logo{
@@ -97,7 +95,8 @@ body{
                     padding: 1.5rem;
                     margin-left: 1rem;
                     a{
-                        color: black;
+                        text-decoration: none;
+                        color: $black;
                     }
                 }
                 #close{
@@ -127,6 +126,7 @@ body{
             padding-block: 0.5rem;
             h2{
                 padding-block: 0.5rem;
+                color: $black;
             }
             label{
                 color: $black;
@@ -400,7 +400,7 @@ body{
                         display: flex;
                         align-items: flex-start;
                         li a{
-                            color: $white;
+                            //color: $white;
                         }
                     }
                 }

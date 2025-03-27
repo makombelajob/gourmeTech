@@ -29,10 +29,10 @@ export function theme(){
 	// Changement de theme par rapport au système d'exploitation
 	window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
 		body.classList.remove("dark");
-		localStorage.theme = "";
+		localStorage.removeItem("theme");
 		if(e.matches){
 			body.classList.add("dark");
-			localStorage.theme = "dark";
+			localStorage.setItem("theme", "dark");
 		}
 	})
 }

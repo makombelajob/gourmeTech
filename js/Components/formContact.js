@@ -1,12 +1,12 @@
 // Initialisation de variable booléen qui stockeront nos valeurs
-let namevalid = emailValid = msgValid = rgpdValid = false;
+let nameValid = emailValid = msgValid = rgpdValid = false;
 const btnSubmit = document.querySelector("#submit");
 
 /**
  * fonction qui active le bouton si tout est valide
  */
 function toutValid() {
-	btnSubmit.disabled = !(namevalid && emailValid && msgValid && rgpdValid);
+	btnSubmit.disabled = !(nameValid && emailValid && msgValid && rgpdValid);
 }
 
 /**
@@ -45,10 +45,10 @@ nameUser.addEventListener("change", function() {
 	// Condition si le champs n'est pas correcte
 	if(this.value.length < 5 ){
 		invalidInput(valid, invalid, feedback);
-		namevalid = false;
+		nameValid = false;
 	}else{
 		validInput(valid, invalid, feedback);
-		namevalid = true;
+		nameValid = true;
 	}
 	toutValid();
 });
@@ -97,7 +97,7 @@ rgpd.addEventListener("change", function () {
 		rgpdValid = true;
 	}else{
 		feedback.style.display = "block";
-		rgpdvalid = false;
+		rgpdValid = false;
 	}
 	toutValid();
 });
@@ -106,8 +106,7 @@ rgpd.addEventListener("change", function () {
 const form = document.querySelector("#contact");
 form.addEventListener("submit", function(event) {
 	event.preventDefault();
-	if(namevalid && emailValid && msgValid && rgpdValid) {
-		btnSubmit.removeAttribute("disabled");
+	if(nameValid && emailValid && msgValid && rgpdValid) {
 		alert("Message Envoyer avec succès 👍");
 		location.href = "index.html";
 	}else{
